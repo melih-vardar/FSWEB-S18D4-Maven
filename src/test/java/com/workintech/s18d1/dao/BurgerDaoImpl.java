@@ -61,6 +61,7 @@ public class BurgerDaoImpl implements BurgerDao
         return entityManager.merge(burger);
     }
 
+    @Transactional
     @Override
     public Burger remove(long id) {
         Burger found = findById(id);
